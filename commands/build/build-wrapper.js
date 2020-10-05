@@ -3,7 +3,7 @@
 
 const chalk = require('chalk');
 const webpack = require('webpack');
-const formatWebpackMessages = require('react-dev-utils/formatWebpackMessages');
+const formatWebpackMessages = require('../util/format-webpack-messages');
 
 function build(config, previousFileSizes) {
     let compiler = webpack(config);
