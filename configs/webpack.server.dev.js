@@ -4,7 +4,7 @@ const webpack = require('webpack');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const StartServerPlugin = require('start-server-webpack-plugin');
-const ReloadServerPlugin = require('reload-server-webpack-plugin');
+const ReloadServerPlugin = require('../plugins/reload-server-webpack-plugin');
 const nodeExternals = require('webpack-node-externals');
 
 const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin');
@@ -55,7 +55,7 @@ const config = {
                 .replace(/\\/g, '/'),
     },
     externals: [nodeExternals({
-        whitelist: [
+        allowlist: [
             /^arui-feather/,
             /^arui-ft-private/,
             /^arui-private/,
@@ -200,7 +200,7 @@ const config = {
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
         }),
-        new webpack.NamedModulesPlugin(),
+        // new webpack.NamedModulesPlugin(),
         // Watcher doesn't work well if you mistype casing in a path so we use
         // a plugin that prints an error when you attempt to do this.
         // See https://github.com/facebookincubator/create-react-app/issues/240

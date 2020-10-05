@@ -14,7 +14,7 @@ ${assets.css.map(c => `<link rel='stylesheet' href='/${c}' />`)}
 </head>
 <body>
 <div id='app'></div>
-${assets.js.map(c => `<script type='text/javascript' src='/${c}'></script>`)}
+${assets.js.map(c => `<script type='text/javascript' src='/${c}'></script>`).join('\n')}
 </body>
 </html>
 `;

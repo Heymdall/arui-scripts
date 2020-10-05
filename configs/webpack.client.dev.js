@@ -230,7 +230,8 @@ module.exports = applyOverrides(['webpack', 'webpackClient', 'webpackDev', 'webp
     plugins: [
         new AssetsPlugin({ path: configs.serverOutputPath }),
         new webpack.DefinePlugin({
-            'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+            'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+            'process.env': '{}' 
         }),
         // This is necessary to emit hot updates (currently CSS only):
         new webpack.HotModuleReplacementPlugin(),
@@ -269,13 +270,13 @@ module.exports = applyOverrides(['webpack', 'webpackClient', 'webpackDev', 'webp
     ].filter(Boolean),
     // Some libraries import Node modules but don't use them in the browser.
     // Tell Webpack to provide empty mocks for them so importing them works.
-    node: {
-        dgram: 'empty',
-        fs: 'empty',
-        net: 'empty',
-        tls: 'empty',
-        child_process: 'empty',
-    },
+    // node: {
+    //     dgram: 'empty',
+    //     fs: 'empty',
+    //     net: 'empty',
+    //     tls: 'empty',
+    //     child_process: 'empty',
+    // },
     // Turn off performance hints during development because we don't do any
     // splitting or minification in interest of speed. These warnings become
     // cumbersome.
