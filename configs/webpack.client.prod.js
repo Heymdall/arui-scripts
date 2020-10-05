@@ -275,6 +275,9 @@ module.exports = applyOverrides(['webpack', 'webpackClient', 'webpackProd', 'web
     },
     plugins: [
         new AssetsPlugin({ path: configs.serverOutputPath }),
+        new webpack.DefinePlugin({
+            'process.env': '{}' 
+        }),
         // Note: this won't work without ExtractTextPlugin.extract(..) in `loaders`.
         new MiniCssExtractPlugin({
             filename: '[name].[contenthash:8].css',
