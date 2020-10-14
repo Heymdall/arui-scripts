@@ -276,6 +276,7 @@ module.exports = applyOverrides(['webpack', 'webpackClient', 'webpackProd', 'web
     plugins: [
         new AssetsPlugin({ path: configs.serverOutputPath }),
         new webpack.DefinePlugin({
+            // Tell Webpack to provide empty mocks for process.env.
             'process.env': '{}' 
         }),
         // Note: this won't work without ExtractTextPlugin.extract(..) in `loaders`.
@@ -326,13 +327,4 @@ module.exports = applyOverrides(['webpack', 'webpackClient', 'webpackProd', 'web
                 )
             ]
     ),
-    // Some libraries import Node modules but don't use them in the browser.
-    // Tell Webpack to provide empty mocks for them so importing them works.
-    // node: {
-    //     dgram: 'empty',
-    //     fs: 'empty',
-    //     net: 'empty',
-    //     tls: 'empty',
-    //     child_process: 'empty',
-    // }
 });
