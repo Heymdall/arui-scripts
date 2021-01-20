@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v1
       - name: create new version
         run: |
-          cd packages/arui-scripts
+          cd packages/arui-scripts-akitov
           yarn --immutable && yarn semantic-release -d
         env:
           GITHUB_TOKEN: ${{ secrets.PERMISSION_GITHUB_TOKEN }}
