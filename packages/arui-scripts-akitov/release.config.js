@@ -5,7 +5,6 @@ module.exports = {
         '@semantic-release/changelog',
         '@semantic-release/github',
         '@semantic-release/npm',
-        '@semantic-release/git',
     ],
     branches: [
         { name: 'master' },
