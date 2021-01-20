@@ -10,7 +10,7 @@ module.exports = {
     branches: [
         { name: 'master' },
         { name: '*', channel: 'beta', prerelease: true },
-        { name: '*/*', channel: 'beta', prerelease: true },
+        { name: '*/*', channel: 'beta', prerelease: '${name.replace(/\\//g, "-")}' },
     ],
     repositoryUrl: 'https://github.com/alfa-laboratory/arui-scripts',
 };
