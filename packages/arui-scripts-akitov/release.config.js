@@ -12,5 +12,5 @@ module.exports = {
         { name: '*', channel: 'beta', prerelease: true },
         { name: '*/*', channel: 'beta', prerelease: '${name.replace(/\\//g, "-")}' },
     ],
-    repositoryUrl: 'https://github.com/alfa-laboratory/arui-scripts',
+    repositoryUrl: 'https://github.com/Heymdall/arui-scripts',
 };
