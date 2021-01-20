@@ -1,6 +1,6 @@
 {
     "name": "arui-scripts-akitov",
-    "version": "10.2.0",
+    "version": "10.2.0-feat-check-prerelease.1",
     "main": "index.js",
     "license": "MPL-2.0",
     "repository": {
