@@ -1,5 +1,5 @@
 {
-    "name": "arui-scripts",
+    "name": "arui-scripts-akitov",
     "version": "10.1.4",
     "main": "index.js",
     "license": "MPL-2.0",
@@ -149,7 +149,7 @@
         "react-dom": "^16.0.0",
         "typescript": ">=3.7.3"
     },
-    "author": "Good guys from Alfa Laboratory",
+    "author": "Akitov",
     "maintainers": [
         {
             "email": "akitov@alfabank.ru",

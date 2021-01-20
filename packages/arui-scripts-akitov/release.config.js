@@ -7,6 +7,9 @@ module.exports = {
         '@semantic-release/npm',
         '@semantic-release/git',
     ],
-    branches: ['master'],
+    branches: [
+        { name: 'master' },
+        { name: '*', channel: 'beta', prerelease: 'beta' },
+    ],
     repositoryUrl: 'https://github.com/alfa-laboratory/arui-scripts',
 };
